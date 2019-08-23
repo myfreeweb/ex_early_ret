@@ -7,7 +7,7 @@ defmodule ExEarlyRet.MixProject do
       name: "ex_early_ret",
       description: "An Elixir macro for limited early return (expands to nested if-else)",
       source_url: "https://github.com/myfreeweb/ex_early_ret",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.7",
       deps: deps(),
       package: package()
