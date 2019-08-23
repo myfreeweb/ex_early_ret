@@ -12,7 +12,7 @@ defmodule ExEarlyRet do
   defp retfold([hd | tl], acc), do: retfold(tl, [hd | acc])
   defp retfold([], acc), do: Enum.reverse(acc)
 
-  defp retwrap({:__block__, [], stmts}), do: {:__block__, [], IO.inspect(retfold(stmts, []))}
+  defp retwrap({:__block__, [], stmts}), do: {:__block__, [], retfold(stmts, [])}
   defp retwrap(x), do: x
 
   defmacro earlyret(do: expr), do: retwrap(expr)
